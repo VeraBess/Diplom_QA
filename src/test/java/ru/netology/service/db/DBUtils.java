@@ -10,8 +10,8 @@ public class DBUtils {
     private static final String USER = "app";
     private static final String PASSWORD = "pass";
 
-    public static String getValidVerificationStatusApproved() {
-        String query = "SELECT status FROM payment_entity WHERE status = 'APPROVED' ORDER BY created DESC LIMIT 1";
+    public static String getValidVerificationStatusPay() {
+        String query = "SELECT status FROM payment_entity ORDER BY created DESC LIMIT 1";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             QueryRunner runner = new QueryRunner();
             return runner.query(conn, query, new ScalarHandler<>());
@@ -20,8 +20,8 @@ public class DBUtils {
         }
     }
 
-    public static String getValidVerificationStatusDeclined() {
-        String query = "SELECT status FROM payment_entity WHERE status = 'DECLINED' ORDER BY created DESC LIMIT 1";
+    public static String getValidVerificationStatusCredit() {
+        String query = "SELECT status FROM credit_request_entity ORDER BY created DESC LIMIT 1";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD)) {
             QueryRunner runner = new QueryRunner();
             return runner.query(conn, query, new ScalarHandler<>());

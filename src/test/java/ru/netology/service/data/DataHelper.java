@@ -19,7 +19,7 @@ public class DataHelper {
     }
 
     public static String getDeclinedCardNumber() { // номер заблокированной карты
-            return "4444 4444 4444 4442";
+        return "4444 4444 4444 4442";
     }
 
     public static String generateMonth(int monthChange) { //генерация месяца
@@ -57,6 +57,7 @@ public class DataHelper {
                 generateYear(0),
                 generateValidOwner(),
                 generateValidCVC()
+
         );
     }
 

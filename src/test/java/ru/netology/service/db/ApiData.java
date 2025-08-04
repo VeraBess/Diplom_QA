@@ -9,14 +9,24 @@ import static io.restassured.RestAssured.given;
 public class ApiData {
     private static final String baseUri = "http://localhost:8080";
 
-    private ApiData() {}
+    private ApiData() {
+    }
 
-    public static Response buyTour(DataHelper.CardData cardData) {
+    public static Response buyTourPay(DataHelper.CardData cardData) {
         return given()
                 .baseUri(baseUri)
                 .contentType(ContentType.JSON)
                 .body(cardData)
                 .when()
-                .post("/api/v1/pay");
+                .post("api/v1/pay");
+    }
+
+    public static Response buyTourCredit(DataHelper.CardData cardData) {
+        return given()
+                .baseUri(baseUri)
+                .contentType(ContentType.JSON)
+                .body(cardData)
+                .when()
+                .post("api/v1/credit");
     }
 }
