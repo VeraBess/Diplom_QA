@@ -1,5 +1,6 @@
 package ru.netology.service.test;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.netology.service.data.DataHelper;
 import ru.netology.service.db.DBUtils;
@@ -12,7 +13,8 @@ import static ru.netology.service.db.ApiData.buyTourPay;
 public class ApiTest {
 
     @Test
-    void buyStatusApprovedWithValidCardPay() { // Покупка с валидной карты
+    @DisplayName("Покупка с валидной карты")
+    void buyStatusApprovedWithValidCardPay() {
         var validCard = DataHelper.getValidCardData(); //данные
         var response = buyTourPay(validCard); // покупка
 
@@ -25,7 +27,8 @@ public class ApiTest {
     }
 
     @Test
-    void buyStatusDeclinedWithInvalidCardPay() { // Покупка с заблокированной карты
+    @DisplayName("Покупка с заблокированной карты")
+    void buyStatusDeclinedWithInvalidCardPay() {
         var invalidCard = DataHelper.getBlockedCardData();  //данные
         var response = buyTourPay(invalidCard);  // покупка
 
@@ -38,7 +41,8 @@ public class ApiTest {
     }
 
     @Test
-    void buyStatusApprovedWithValidCardCredit() { // Покупка в кредит с валидной карты
+    @DisplayName("Покупка в кредит с валидной карты")
+    void buyStatusApprovedWithValidCardCredit() {
         var validCard = DataHelper.getValidCardData(); //данные
         var response = buyTourCredit(validCard); // покупка
 
@@ -52,7 +56,8 @@ public class ApiTest {
     }
 
     @Test
-    void buyStatusDeclinedWithInvalidCardCredit() { // Покупка в кредит с заблокированной карты
+    @DisplayName("Покупка в кредит с заблокированной карты")
+    void buyStatusDeclinedWithInvalidCardCredit() {
         var invalidCard = DataHelper.getBlockedCardData();  //данные
         var response = buyTourCredit(invalidCard);  // покупка
 

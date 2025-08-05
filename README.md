@@ -23,12 +23,12 @@
    - docker compose up -d
    
 2. Во втором терминале выполнить запуск приложения с флагом варианта подключения к целевой базе данных командами:
-   - Для работы с MySQL: java -Dspring.datasource.url="jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar
-   - Для работы PostgreSQL: java -Dspring.datasource.url="jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
+   - ***Для работы с MySQL:*** java -Dspring.datasource.url="jdbc:mysql://localhost:3306/app" -jar artifacts/aqa-shop.jar
+   - ***Для работы PostgreSQL:*** java -Dspring.datasource.url="jdbc:postgresql://localhost:5432/app" -jar artifacts/aqa-shop.jar
 
-3. В третьем терминале запустить автотесты с заданием адреса базы данных:
-   - Для работы с MySQL: ./gradlew clean test -Ddb.url="jdbc:mysql://localhost:3306/app"
-   - Для работы с PostgreSQL: ./gradlew clean test  -Ddb.url="jdbc:postgresql://localhost:5432/app"
+3. В третьем терминале запустить автотесты с заданием адреса целевой базы данных:
+   - ***Для работы с MySQL:*** ./gradlew clean test -Ddb.url="jdbc:mysql://localhost:3306/app"
+   - ***Для работы с PostgreSQL:*** ./gradlew clean test  -Ddb.url="jdbc:postgresql://localhost:5432/app"
 
 ### Результат выполнения автотестов:
 /build/report/index.html лучше открыть в браузере

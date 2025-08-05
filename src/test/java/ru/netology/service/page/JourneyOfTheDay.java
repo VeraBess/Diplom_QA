@@ -10,12 +10,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class JourneyOfTheDay {
 
-    // Элементы главной страницы
-    private SelenideElement travelTitle = $(".heading_size_l"); //заголовок "Путешествие дня" на главной странице
-    private SelenideElement buyButton = $(".button_theme_alfa-on-white .button__text=Купить"); //кнопка купить
-    private SelenideElement buyCreditButton = $(".button_view_extra .button__text=Купить в кредит"); //кнопка купить в кредит
+    // Элементы для навигации по главной страницы
+    public SelenideElement travelTitle = $(".heading_size_l"); //заголовок "Путешествие дня" на главной странице
+    public SelenideElement buyButton = $$("button").findBy(text("Купить")); //кнопка купить
+    public SelenideElement buyCreditButton = $$("button").findBy(text("Купить в кредит")); //кнопка купить в кредит
+    public SelenideElement paymentByCard = $$("h3").findBy(text("Оплата по карте")); //надпись
+    public SelenideElement creditToCardData = $$("h3").findBy(text("Кредит по данным карты")); //надпись
 
-    // Элементы формы оплаты
+    // Элементы для проверки формы оплаты
     private SelenideElement cardNumberField = $("[placeholder='0000 0000 0000 0000']"); //поле номер карты
     private SelenideElement monthField = $("[placeholder='08']"); //поле месяц
     private SelenideElement yearField = $("[placeholder='22']"); //поле год
