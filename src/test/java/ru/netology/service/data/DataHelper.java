@@ -66,7 +66,7 @@ public class DataHelper {
         String number;
         String month;
         String year;
-        String holder;
+        String owner;
         String cvc;
     }
 }

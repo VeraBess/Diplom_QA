@@ -23,7 +23,7 @@ public class JourneyOfTheDay {
     private SelenideElement yearField = $("[placeholder='22']"); //поле год
     private SelenideElement ownerField = $$(".input__control").get(3); //поле владелец, четвертое поле в коллекции
     private SelenideElement cvcField = $("[placeholder='999']"); //поле CVC/CVV
-    private SelenideElement payButton = $(".button__text=Продолжить"); //кнопка продолжить
+    private SelenideElement payButton = $$("button").findBy(text("Продолжить")); //кнопка продолжить
     private ElementsCollection errorFields = $$(".input__sub"); //коллекция сообщений об ошибках под полями ввода
     private SelenideElement okMessage = $(".notification_status_ok .notification__content"); //сообщение об успешной операции
     private SelenideElement errorMessage = $(".notification_status_error .notification__content"); // сообщение об ошибке операции
@@ -40,10 +40,6 @@ public class JourneyOfTheDay {
 
     public void clickBuyCreditButton() { // клик по кнопке "Купить в кредит"
         buyCreditButton.click();
-    }
-
-    public String getTravelTitle() { //возвращаем заголовок на главной странице в виде текста
-        return travelTitle.getText();
     }
 
     // Форма оплаты
