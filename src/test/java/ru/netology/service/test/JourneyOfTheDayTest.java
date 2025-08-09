@@ -468,7 +468,7 @@ public class JourneyOfTheDayTest {
                 validCardData.getMonth(),
                 validCardData.getYear(),
                 validCardData.getOwner(),
-                "!-");
+                "!-№");
         journeyPage.checkCvc("");
         journeyPage.continueButton();
         journeyPage.checkErrorFields("Неверный формат");
