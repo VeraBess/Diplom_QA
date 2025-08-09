@@ -13,8 +13,10 @@
 - Успешно пройдены: 35 автотеста (83,33%)
 - Провалено: 7 автотеста (16,67%)
 
-[!]
-[!]
+<img width="1221" height="724" alt="AllureForReport" src="https://github.com/user-attachments/assets/54630d1b-4352-4ca3-8ed4-0f623c5d2ad2" />
+
+<img width="1100" height="511" alt="GradleForReport" src="https://github.com/user-attachments/assets/49466fb1-249c-40e0-adc4-0444fe6d0a1a" />
+
 
 ## Общие рекомендации
 - Исправить баги в которых проходит успешная оплата с заблокированной карты issues #1 и issues #6
